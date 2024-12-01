@@ -1,22 +1,19 @@
 <?php
+
 /**
- * @var yii\web\View $this
+ * @var View $this
  * @var string $content
  */
 
 use app\assets\AppAsset;
-use app\enums\IdentityType;
-use app\widgets\Alert;
-use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
-use yii\bootstrap5\Nav;
-use yii\bootstrap5\NavBar;
+use yii\web\View;
 
-AppAsset::register($this);
+$mainAsset = AppAsset::register($this);
 
 $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
-$this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
+$this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0']);
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
@@ -28,78 +25,160 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="d-flex flex-column h-100">
+
+<!--begin::Body-->
+<body class="layout-fixed sidebar-expand-lg sidebar-mini sidebar-open">
 <?php $this->beginBody() ?>
+<!--begin::App Wrapper-->
+<div class="app-wrapper">
+    <!--begin::Header-->
+    <nav class="app-header navbar navbar-expand bg-body">
+        <!--begin::Container-->
+        <div class="container-fluid">
+            <!--begin::Start Navbar Links-->
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" data-lte-toggle="sidebar" href="#" role="button"> <i class="bi bi-list"></i> </a></li>
+                <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <!--end::Start Navbar Links-->
 
-<header id="header">
-    <?php NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top'],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav'],
-        'items' => [
-            '<div class="d-flex">' . Html::a('Создать расчет', ['/calculation/create'], ['class' => 'btn btn-outline-success']) . '</div>',
-            ['label' => 'База расчетов', 'url' => ['/calculation/index'], 'active' => Yii::$app->controller->id == 'calculation'],
-            [
-                'label' => 'Справочники',
-                'items' => [
-                    [
-                        'label' => 'Пользователи',
-                        'url' => ['/identity/index'],
-                        'active' => Yii::$app->controller->id == 'identity',
-                        'visible' => Yii::$app->user->identity->type == IdentityType::Administrator->value,
-                    ],
-                    ['label' => 'Валюты', 'url' => ['/currency/index'], 'active' => Yii::$app->controller->id == 'currency'],
-                    ['label' => 'Камни', 'url' => ['/gem/index'], 'active' => Yii::$app->controller->id == 'gem'],
-                    ['label' => 'Металлы', 'url' => ['/metal/index'], 'active' => Yii::$app->controller->id == 'metal'],
-                    ['label' => 'Виды работ', 'url' => ['/work/index'], 'active' => Yii::$app->controller->id == 'work'],
-                    ['label' => 'Клиенты', 'url' => ['/client/index'], 'active' => Yii::$app->controller->id == 'client'],
-                ],
-            ],
-            [
-                'label' => 'Курсы',
-                'items' => [
-                    ['label' => 'Курсы валют', 'url' => ['/currency-rate/index'], 'active' => Yii::$app->controller->id == 'currencyRate'],
-                    ['label' => 'Курсы металлов', 'url' => ['/metal-rate/index'], 'active' => Yii::$app->controller->id == 'metalRate'],
-                    ['label' => 'Курсы Камней', 'url' => ['/gem-rate/index'], 'active' => Yii::$app->controller->id == 'gemRate'],
-                ],
-            ],
-        ],
-    ]);
+            <!--begin::End Navbar Links-->
+            <ul class="navbar-nav ms-auto">
+                <!--begin::Navbar Search-->
+                <li class="nav-item"><a class="nav-link" data-widget="navbar-search" href="#" role="button"> <i class="bi bi-search"></i> </a></li>
+                <!--end::Navbar Search-->
+                <!--begin::Messages Dropdown Menu-->
+                <li class="nav-item dropdown"><a class="nav-link" data-bs-toggle="dropdown" href="#"> <i class="bi bi-chat-text"></i> <span class="navbar-badge badge text-bg-danger">3</span> </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end"><a href="#" class="dropdown-item">
+                            <!--begin::Message-->
+                            <div class="d-flex">
+                                <div class="flex-shrink-0"><img src="/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 rounded-circle me-3"></div>
+                                <div class="flex-grow-1">
+                                    <h3 class="dropdown-item-title">
+                                        Brad Diesel
+                                        <span class="float-end fs-7 text-danger"><i class="bi bi-star-fill"></i></span>
+                                    </h3>
+                                    <p class="fs-7">Call me whenever you can...</p>
+                                    <p class="fs-7 text-secondary"><i class="bi bi-clock-fill me-1"></i> 4 Hours Ago
+                                    </p>
+                                </div>
+                            </div>
+                            <!--end::Message-->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <!--begin::Message-->
+                            <div class="d-flex">
+                                <div class="flex-shrink-0"><img src="/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 rounded-circle me-3"></div>
+                                <div class="flex-grow-1">
+                                    <h3 class="dropdown-item-title">
+                                        John Pierce
+                                        <span class="float-end fs-7 text-secondary"> <i class="bi bi-star-fill"></i> </span>
+                                    </h3>
+                                    <p class="fs-7">I got your message bro</p>
+                                    <p class="fs-7 text-secondary"><i class="bi bi-clock-fill me-1"></i> 4 Hours Ago
+                                    </p>
+                                </div>
+                            </div>
+                            <!--end::Message-->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <!--begin::Message-->
+                            <div class="d-flex">
+                                <div class="flex-shrink-0"><img src="/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 rounded-circle me-3"></div>
+                                <div class="flex-grow-1">
+                                    <h3 class="dropdown-item-title">
+                                        Nora Silvester
+                                        <span class="float-end fs-7 text-warning"> <i class="bi bi-star-fill"></i> </span>
+                                    </h3>
+                                    <p class="fs-7">The subject goes here</p>
+                                    <p class="fs-7 text-secondary"><i class="bi bi-clock-fill me-1"></i> 4 Hours Ago
+                                    </p>
+                                </div>
+                            </div>
+                            <!--end::Message-->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                    </div>
+                </li>
+                <!--end::Messages Dropdown Menu-->
+                <!--begin::Notifications Dropdown Menu-->
+                <li class="nav-item dropdown"><a class="nav-link" data-bs-toggle="dropdown" href="#"> <i class="bi bi-bell-fill"></i> <span class="navbar-badge badge text-bg-warning">15</span> </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end"><span class="dropdown-item dropdown-header">15 Notifications</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"> <i class="bi bi-envelope me-2"></i> 4 new messages
+                            <span class="float-end text-secondary fs-7">3 mins</span> </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"> <i class="bi bi-people-fill me-2"></i> 8 friend requests
+                            <span class="float-end text-secondary fs-7">12 hours</span> </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"> <i class="bi bi-file-earmark-fill me-2"></i> 3 new reports
+                            <span class="float-end text-secondary fs-7">2 days</span> </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">
+                            See All Notifications
+                        </a>
+                    </div>
+                </li>
+                <!--end::Notifications Dropdown Menu-->
 
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav ms-auto'],
-        'items' => [
-            ['label' => 'Login', 'url' => ['/auth/login'], 'visible' => Yii::$app->user->isGuest],
-            ['label' => 'Logout', 'url' => ['/auth/logout'], 'visible' => !Yii::$app->user->isGuest, 'linkOptions' => ['data-method' => 'post']],
-        ],
-    ]);
-    NavBar::end();
-    ?>
-</header>
+                <!--begin::Fullscreen Toggle-->
+                <li class="nav-item"><a class="nav-link" href="#" data-lte-toggle="fullscreen"> <i data-lte-icon="maximize" class="bi bi-arrows-fullscreen"></i> <i data-lte-icon="minimize" class="bi bi-fullscreen-exit" style="display: none;"></i> </a></li>
+                <!--end::Fullscreen Toggle-->
 
-<main id="main" class="flex-shrink-0" role="main">
-    <div class="container">
-        <?php if (!empty($this->params['breadcrumbs'])): ?>
-            <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
-        <?php endif ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</main>
+                <!--begin::User Menu Dropdown-->
+                <li class="nav-item dropdown user-menu"><a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> <img src="/img/user2-160x160.jpg" class="user-image rounded-circle shadow" alt="User Image"> <span class="d-none d-md-inline">Alexander Pierce</span> </a>
+                    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                        <!--begin::User Image-->
+                        <li class="user-header text-bg-primary"><?= Html::img('/img/user2-160x160.jpg', ['alt' => 'User Image', 'class' => ['rounded-circle,shadow']]) ?>
+                            <p>
+                                Alexander Pierce - Web Developer
+                                <small>Member since Nov. 2023</small>
+                            </p>
+                        </li>
+                        <!--end::User Image-->
 
-<footer id="footer" class="mt-auto py-3 bg-light">
-    <div class="container">
-        <div class="row text-muted">
-            <div class="col-md-6 text-center text-md-start">&copy; My Company <?= date('Y') ?></div>
-            <div class="col-md-6 text-center text-md-end"><?= Yii::powered() ?></div>
+                        <!--begin::Menu Body-->
+                        <li class="user-body">
+                            <!--begin::Row-->
+                            <div class="row">
+                                <div class="col-4 text-center"><a href="#">Followers</a></div>
+                                <div class="col-4 text-center"><a href="#">Sales</a></div>
+                                <div class="col-4 text-center"><a href="#">Friends</a></div>
+                            </div>
+                            <!--end::Row-->
+                        </li>
+                        <!--end::Menu Body-->
+
+                        <!--begin::Menu Footer-->
+                        <li class="user-footer"><a href="#" class="btn btn-default btn-flat">Profile</a> <a href="#" class="btn btn-default btn-flat float-end">Sign out</a></li>
+                        <!--end::Menu Footer-->
+                    </ul>
+                </li>
+                <!--end::User Menu Dropdown-->
+            </ul>
+            <!--end::End Navbar Links-->
         </div>
-    </div>
-</footer>
+        <!--end::Container-->
+    </nav>
+    <!--end::Header-->
 
+
+    <?= $this->render('sidebar') ?>
+
+    <?= $this->render('content') ?>
+
+    <?= $this->render('footer') ?>
+
+</div>
+<!--end::App Wrapper-->
 <?php $this->endBody() ?>
 </body>
+<!--end::Body-->
+
+
 </html>
 <?php $this->endPage() ?>

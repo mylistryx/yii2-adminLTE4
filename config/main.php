@@ -3,7 +3,6 @@
 use yii\caching\FileCache;
 use yii\i18n\PhpMessageSource;
 use yii\web\User;
-use yii\web\View;
 
 $config = [
     'language' => 'ru-RU',
@@ -30,9 +29,6 @@ $config = [
                     ]
                 ]
             ],
-        ],
-        'view' => [
-            'class' => View::class,
         ],
         'user' => [
             'class' => User::class,
