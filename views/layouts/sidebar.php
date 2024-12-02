@@ -4,7 +4,7 @@
  * @var AdminLTE4Asset $adminLteAsset
  */
 
-use yii\AdminLTE4\AdminLTE4Asset;
+use yii\AdminLTE4\assets\AdminLTE4Asset;
 use yii\web\View;
 
 ?>
@@ -14,9 +14,7 @@ use yii\web\View;
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
             <!--begin::Brand Link--> <a href="/" class="brand-link">
-                <?php
-                AdminLTE4Asset::register($this);
-                ?>
+
                 <!--begin::Brand Image-->
                 <img src="/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image opacity-75 shadow">
                 <!--end::Brand Image-->
@@ -538,28 +536,28 @@ use yii\web\View;
     <!--end::Sidebar-->
 
 <?php
-$JS = <<<JS
-    const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
-    const Default = {
-        scrollbarTheme: "os-theme-light",
-        scrollbarAutoHide: "leave",
-        scrollbarClickScroll: true
-    };
-    document.addEventListener("DOMContentLoaded", function() {
-        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
-        if (
-            sidebarWrapper &&
-            typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined"
-        ) {
-            OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
-                scrollbars: {
-                    theme: Default.scrollbarTheme,
-                    autoHide: Default.scrollbarAutoHide,
-                    clickScroll: Default.scrollbarClickScroll
-                },
-            });
-        }
-    });
-    JS;
-
-$this->registerJs($JS, View::POS_END);
+//$JS = <<<JS
+//    const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
+//    const Default = {
+//        scrollbarTheme: "os-theme-light",
+//        scrollbarAutoHide: "leave",
+//        scrollbarClickScroll: true
+//    };
+//    document.addEventListener("DOMContentLoaded", function() {
+//        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+//        if (
+//            sidebarWrapper &&
+//            typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined"
+//        ) {
+//            OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+//                scrollbars: {
+//                    theme: Default.scrollbarTheme,
+//                    autoHide: Default.scrollbarAutoHide,
+//                    clickScroll: Default.scrollbarClickScroll
+//                },
+//            });
+//        }
+//    });
+//    JS;
+//
+//$this->registerJs($JS, View::POS_END);
