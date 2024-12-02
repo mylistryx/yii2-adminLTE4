@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bffeb90099ecbad382bbf87ded24c23a",
+    "content-hash": "8618ebff8386904f032d7846886a0b79",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -403,6 +403,58 @@
                 "source": "https://github.com/mylistryx/yii2-fontawesome-free/tree/2.0.0"
             },
             "time": "2024-11-25T11:42:04+00:00"
+        },
+        {
+            "name": "mylistryx/yii2-overlay-scrollbars-asset",
+            "version": "2.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mylistryx/yii2-overlay-scrollbars-asset.git",
+                "reference": "ecc2a17760cb8c822b5faa0a80d080f4101b71b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mylistryx/yii2-overlay-scrollbars-asset/zipball/ecc2a17760cb8c822b5faa0a80d080f4101b71b2",
+                "reference": "ecc2a17760cb8c822b5faa0a80d080f4101b71b2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "yiisoft/yii2": "~2.0.50"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii\\OverlayScrollbars\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Zhukovskiy",
+                    "email": "mylistryx@gmail.com",
+                    "homepage": "https://net23.ru"
+                }
+            ],
+            "description": "Yii2 OverlayScrollbars asset bundle",
+            "keywords": [
+                "asset",
+                "bootstrap5",
+                "bundle",
+                "free",
+                "overlay",
+                "overlayscrollbars",
+                "scrollbar",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/mylistryx/yii2-overlay-scrollbars-asset/issues",
+                "source": "https://github.com/mylistryx/yii2-overlay-scrollbars-asset/tree/2.10.1"
+            },
+            "time": "2024-12-02T15:47:57+00:00"
         },
         {
             "name": "paragonie/random_compat",

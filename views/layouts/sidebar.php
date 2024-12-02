@@ -562,6 +562,4 @@ $JS = <<<JS
     });
     JS;
 
-?>
-<?php
 $this->registerJs($JS, View::POS_END);
