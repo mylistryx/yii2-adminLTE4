@@ -26,14 +26,13 @@
     "ext-json": "*",
     "ext-openssl": "*",
     "ext-zip": "*",
-    "mylistryx/yii2-adminlte4-asset": ">=1.0.0",
-    "mylistryx/yii2-bootstrap-icons-asset": ">=1.0.0",
-    "mylistryx/yii2-fontawesome-pro": ">=6.0.0",
-    "mylistryx/yii2-overlay-scrollbars-asset": ">=2.0.0",
+    "mylistryx/yii2-bootstrap-icon": ">=1.0.0",
+    "mylistryx/yii2-fontawesome-free": ">=6.7.0",
+    "mylistryx/yii2-overlay-scrollbars-asset": ">=2.10.0",
     "mylistryx/yii2-source-sans-3-asset": ">=1.0.0",
-    "php": ">=8.2.0",
-    "yiisoft/yii2": "~2.0.50",
-    "yiisoft/yii2-bootstrap5": "~2.0.2"
+    "php": ">=8.3.0",
+    "yiisoft/yii2-bootstrap5": "*",
+    "yiisoft/yii2": "~2.0.50"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0",
@@ -73,5 +72,10 @@
       "type": "composer",
       "url": "https://asset-packagist.org"
     }
-  ]
+  ],
+  "autoload": {
+    "psr-4": {
+      "yii\\adminlte4\\": "src/"
+    }
+  }
 }

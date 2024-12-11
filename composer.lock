@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d0349ff2675c14cc9ed2dc2965d93de",
+    "content-hash": "ba857891aff55bc1a92451f0e4ea99eb",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -222,27 +222,29 @@
             "time": "2024-11-01T03:51:45+00:00"
         },
         {
-            "name": "mylistryx/yii2-adminlte4-asset",
-            "version": "1.0.1",
+            "name": "mylistryx/yii2-bootstrap-icon",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mylistryx/yii2-adminlte4-asset.git",
-                "reference": "4377692d68c7236d3db8f16dc309b978968efce1"
+                "url": "https://github.com/mylistryx/yii2-bootstrap-icon.git",
+                "reference": "c9c0c6246d6303dca4f62e60588cc532dc7b0c73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mylistryx/yii2-adminlte4-asset/zipball/4377692d68c7236d3db8f16dc309b978968efce1",
-                "reference": "4377692d68c7236d3db8f16dc309b978968efce1",
+                "url": "https://api.github.com/repos/mylistryx/yii2-bootstrap-icon/zipball/c9c0c6246d6303dca4f62e60588cc532dc7b0c73",
+                "reference": "c9c0c6246d6303dca4f62e60588cc532dc7b0c73",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
-                "yiisoft/yii2": "~2.0.50"
+                "twbs/bootstrap-icons": "v1.11.3",
+                "yiisoft/yii2": "~2.0.50",
+                "yiisoft/yii2-bootstrap5": "~2.0.0"
             },
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
-                    "yii\\AdminLTE4\\": "src/"
+                    "yii\\bootstrap5\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -256,59 +258,7 @@
                     "homepage": "https://net23.ru"
                 }
             ],
-            "description": "Yii2 AdminLTE4 asset bundle with Bootstrap 5 support",
-            "keywords": [
-                "AdminLTE",
-                "admin",
-                "adminlte4",
-                "asset",
-                "bootstrap5",
-                "bundle",
-                "free",
-                "yii2"
-            ],
-            "support": {
-                "issues": "https://github.com/mylistryx/yii2-adminlte4-asset/issues",
-                "source": "https://github.com/mylistryx/yii2-adminlte4-asset/tree/1.0.1"
-            },
-            "time": "2024-12-02T19:15:40+00:00"
-        },
-        {
-            "name": "mylistryx/yii2-bootstrap-icons-asset",
-            "version": "1.11.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mylistryx/yii2-bootstrap-icons-asset.git",
-                "reference": "dc171bf37feccd1778cb5d1d03cde629b7987674"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mylistryx/yii2-bootstrap-icons-asset/zipball/dc171bf37feccd1778cb5d1d03cde629b7987674",
-                "reference": "dc171bf37feccd1778cb5d1d03cde629b7987674",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2",
-                "yiisoft/yii2": "~2.0.50"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "yii\\BootstrapIcons\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sergey Zhukovskiy",
-                    "email": "mylistryx@gmail.com",
-                    "homepage": "https://net23.ru"
-                }
-            ],
-            "description": "Yii2 Bootstrap Icons font asset bundle",
+            "description": "Yii2 Bootstrap Icons font and helper",
             "keywords": [
                 "asset",
                 "bootstrap5",
@@ -320,23 +270,23 @@
                 "yii2"
             ],
             "support": {
-                "issues": "https://github.com/mylistryx/yii2-bootstrap-icons-asset/issues",
-                "source": "https://github.com/mylistryx/yii2-bootstrap-icons-asset/tree/1.11.3"
+                "issues": "https://github.com/mylistryx/yii2-bootstrap-icon/issues",
+                "source": "https://github.com/mylistryx/yii2-bootstrap-icon/tree/1.0.0"
             },
-            "time": "2024-12-02T19:44:54+00:00"
+            "time": "2024-12-11T18:00:30+00:00"
         },
         {
-            "name": "mylistryx/yii2-fontawesome-pro",
-            "version": "6.7.1",
+            "name": "mylistryx/yii2-fontawesome-free",
+            "version": "6.7.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mylistryx/yii2-fontawesome-pro.git",
-                "reference": "d6ade496cfe0056f6f33c4886e21e0912dffc44c"
+                "url": "https://github.com/mylistryx/yii2-fontawesome-free.git",
+                "reference": "141ccdecf6b804b063e0eb0e8f3ae539f3c9148e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mylistryx/yii2-fontawesome-pro/zipball/d6ade496cfe0056f6f33c4886e21e0912dffc44c",
-                "reference": "d6ade496cfe0056f6f33c4886e21e0912dffc44c",
+                "url": "https://api.github.com/repos/mylistryx/yii2-fontawesome-free/zipball/141ccdecf6b804b063e0eb0e8f3ae539f3c9148e",
+                "reference": "141ccdecf6b804b063e0eb0e8f3ae539f3c9148e",
                 "shasum": ""
             },
             "require": {
@@ -360,19 +310,19 @@
                     "homepage": "https://net23.ru"
                 }
             ],
-            "description": "Yii2 FontAwesome PRO asset bundle",
+            "description": "Yii2 FontAwesome Free asset bundle",
             "keywords": [
                 "FontAwesome",
                 "asset",
                 "bundle",
-                "pro",
+                "free",
                 "yii2"
             ],
             "support": {
-                "issues": "https://github.com/mylistryx/yii2-fontawesome-pro/issues",
-                "source": "https://github.com/mylistryx/yii2-fontawesome-pro/tree/6.7.1"
+                "issues": "https://github.com/mylistryx/yii2-fontawesome-free/issues",
+                "source": "https://github.com/mylistryx/yii2-fontawesome-free/tree/6.7.1.1"
             },
-            "time": "2024-12-02T20:11:59+00:00"
+            "time": "2024-12-11T18:32:29+00:00"
         },
         {
             "name": "mylistryx/yii2-overlay-scrollbars-asset",
@@ -525,6 +475,45 @@
                 "source": "https://github.com/paragonie/random_compat"
             },
             "time": "2020-10-15T08:29:30+00:00"
+        },
+        {
+            "name": "twbs/bootstrap-icons",
+            "version": "v1.11.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/icons.git",
+                "reference": "8d88686c03c3768a2d82ba4f20c3c4e1b100fa29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/icons/zipball/8d88686c03c3768a2d82ba4f20c3c4e1b100fa29",
+                "reference": "8d88686c03c3768a2d82ba4f20c3c4e1b100fa29",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "Official open source SVG icon library for Bootstrap",
+            "homepage": "https://icons.getbootstrap.com/",
+            "keywords": [
+                "bootstrap",
+                "icon font",
+                "icons",
+                "svg"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/icons/issues",
+                "source": "https://github.com/twbs/icons/tree/v1.11.3"
+            },
+            "time": "2024-01-03T15:44:45+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -875,20 +864,20 @@
             },
             "type": "yii2-extension",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                },
-                "composer-exit-on-patch-failure": true,
                 "patches": {
-                    "phpunit/phpunit-mock-objects": {
-                        "Fix PHP 7 and 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_mock_objects.patch"
-                    },
                     "phpunit/phpunit": {
                         "Fix PHP 7 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php7.patch",
                         "Fix PHP 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php8.patch",
                         "Fix PHP 8.1 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php81.patch"
+                    },
+                    "phpunit/phpunit-mock-objects": {
+                        "Fix PHP 7 and 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_mock_objects.patch"
                     }
-                }
+                },
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                },
+                "composer-exit-on-patch-failure": true
             },
             "autoload": {
                 "psr-4": {
@@ -963,23 +952,23 @@
             },
             "type": "yii2-extension",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                },
-                "composer-exit-on-patch-failure": true,
                 "patches": {
-                    "phpunit/phpunit-mock-objects": {
-                        "Fix PHP 7 and 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_mock_objects.patch"
-                    },
-                    "phpunit/php-file-iterator": {
-                        "Fix PHP 8.1 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_path_file_iterator.patch"
-                    },
                     "phpunit/phpunit": {
                         "Fix PHP 7 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php7.patch",
                         "Fix PHP 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php8.patch",
                         "Fix PHP 8.1 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php81.patch"
+                    },
+                    "phpunit/php-file-iterator": {
+                        "Fix PHP 8.1 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_path_file_iterator.patch"
+                    },
+                    "phpunit/phpunit-mock-objects": {
+                        "Fix PHP 7 and 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_mock_objects.patch"
                     }
-                }
+                },
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                },
+                "composer-exit-on-patch-failure": true
             },
             "autoload": {
                 "psr-4": {
@@ -1039,7 +1028,7 @@
         "ext-json": "*",
         "ext-openssl": "*",
         "ext-zip": "*",
-        "php": ">=8.2.0"
+        "php": ">=8.3.0"
     },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"

@@ -7,10 +7,11 @@
 
 namespace app\assets;
 
-use yii\AdminLTE4\assets\AdminLTE4Asset;
+use yii\adminlte4\AdminLTE4Asset;
+use yii\adminlte4\AdminLTE4PluginAsset;
 use yii\bootstrap5\BootstrapAsset;
+use yii\bootstrap5\BootstrapIconAsset;
 use yii\bootstrap5\BootstrapPluginAsset;
-use yii\BootstrapIcons\assets\BootstrapIconsAsset;
 use yii\fontawesome\assets\FontAwesomeAsset;
 use yii\OverlayScrollbars\assets\OverlayScrollbarsAsset;
 use yii\SourceSans3\assets\SourceSans3Asset;
@@ -35,12 +36,16 @@ class AppAsset extends AssetBundle
     ];
     public $depends = [
         YiiAsset::class,
+        AdminLTE4Asset::class,
+        AdminLTE4PluginAsset::class,
+
+        SourceSans3Asset::class,
+        FontAwesomeAsset::class,
+
         BootstrapAsset::class,
         BootstrapPluginAsset::class,
-        AdminLTE4Asset::class,
-        SourceSans3Asset::class,
-        BootstrapIconsAsset::class,
-        FontAwesomeAsset::class,
+        BootstrapIconAsset::class,
+
         OverlayScrollbarsAsset::class,
     ];
 }

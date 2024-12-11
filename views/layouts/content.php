@@ -1,3 +1,13 @@
+<?php
+
+/**
+ * @var $this View
+ * @var $content string
+ */
+
+use yii\web\View;
+
+?>
 <!--begin::App Main-->
 <main class="app-main">
     <!--begin::App Content Header-->
