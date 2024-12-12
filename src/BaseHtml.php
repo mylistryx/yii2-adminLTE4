@@ -21,12 +21,12 @@ abstract class BaseHtml extends \yii\helpers\Html
      * @var int a counter used to generate [[id]] for widgets.
      * @internal
      */
-    public static $counter = 0;
+    public static int $counter = 0;
     /**
      * @var string the prefix to the automatically generated widget IDs.
      * @see getId()
      */
-    public static $autoIdPrefix = 'i';
+    public static string $autoIdPrefix = 'i';
     /**
      * @inheritDoc
      */

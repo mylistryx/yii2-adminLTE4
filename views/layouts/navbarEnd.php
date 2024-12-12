@@ -21,7 +21,8 @@ use yii\adminlte4\Html;
             <span class="navbar-badge2 badge text-bg-danger">2342343</span>
         </a>
 
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end"><a href="#" class="dropdown-item">
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+            <a href="#" class="dropdown-item">
                 <!--begin::Message-->
                 <div class="d-flex">
                     <div class="flex-shrink-0">
@@ -101,6 +102,7 @@ use yii\adminlte4\Html;
         </div>
     </li>
     <!--end::Messages Dropdown Menu-->
+
     <!--begin::Notifications Dropdown Menu-->
     <li class="nav-item dropdown">
         <a class="nav-link" data-bs-toggle="dropdown" href="#">
@@ -141,8 +143,8 @@ use yii\adminlte4\Html;
     <!--begin::Fullscreen Toggle-->
     <li class="nav-item">
         <a class="nav-link" href="#" data-lte-toggle="fullscreen">
-            <i data-lte-icon="maximize" class="bi bi-arrows-fullscreen"></i>
-            <i data-lte-icon="minimize" class="bi bi-fullscreen-exit" style="display: none;"></i>
+            <?= BI::i('arrows-fullscreen')->addDataAttribute('lte-icon','maximize') ?>
+            <?= BI::i('fullscreen-exit')->addDataAttribute('lte-icon','minimize')->addCssStyle(['display' => 'none']) ?>
         </a>
     </li>
     <!--end::Fullscreen Toggle-->

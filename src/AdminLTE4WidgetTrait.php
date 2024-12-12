@@ -9,18 +9,17 @@ declare(strict_types=1);
 
 namespace yii\adminlte4;
 
-use app\widgets\BootstrapPluginAsset;
 use yii\helpers\Json;
 
 /**
- * BootstrapWidgetTrait is the trait, which provides basic for all Bootstrap widgets features.
+ * AdminLTE4WidgetTrait is the trait, which provides basic for all AdminLTE4 widgets features.
  *
  * Note: class, which uses this trait must declare public field named `options` with the array default value:
  *
  * ```php
  * class MyWidget extends \yii\base\Widget
  * {
- *     use BootstrapWidgetTrait;
+ *     use AdminLTE4WidgetTrait;
  *
  *     public $options = [];
  * }
@@ -68,7 +67,7 @@ trait AdminLTE4WidgetTrait
      *
      * @param string $name the name of the Bootstrap plugin
      */
-    protected function registerPlugin(string $name)
+    protected function registerPlugin(string $name): void
     {
         /**
          * @see https://github.com/twbs/bootstrap/blob/v5.2.0/js/index.esm.js
@@ -85,16 +84,13 @@ trait AdminLTE4WidgetTrait
             'scrollspy',
             'tab',
             'toast',
-            'tooltip'
+            'tooltip',
         ];
         if (in_array($name, $jsPlugins, true)) {
             $view = $this->getView();
-            BootstrapPluginAsset::register($view);
+            AdminLTE4PluginAsset::register($view);
             // 'popover', 'toast' and 'tooltip' plugins not activates via data attributes
-            if (
-                $this->clientOptions !== false
-                || in_array($name, ['popover', 'toast', 'tooltip'], true)
-            ) {
+            if ($this->clientOptions !== false || in_array($name, ['popover', 'toast', 'tooltip'], true)) {
                 $name = ucfirst($name);
                 $id = $this->options['id'];
                 $options = empty($this->clientOptions) ? '{}' : Json::htmlEncode($this->clientOptions);
@@ -108,7 +104,7 @@ trait AdminLTE4WidgetTrait
     /**
      * Registers JS event handlers that are listed in [[clientEvents]].
      */
-    protected function registerClientEvents(string $name = null)
+    protected function registerClientEvents(string $name = null): void
     {
         if (!empty($this->clientEvents)) {
             $id = $this->options['id'];
@@ -123,11 +119,12 @@ trait AdminLTE4WidgetTrait
 
     public bool $loadingStyle = false;
 
-    protected function renderLoadingStyle($config = [])
+    protected function renderLoadingStyle($config = []): string
     {
         $config = array_merge([
-            'id' => $this->options['id'] . '-overlay'
+            'id' => $this->options['id'] . '-overlay',
         ], $config);
+
         return $this->loadingStyle ? LoadingStyle::widget($config) : '';
     }
 }

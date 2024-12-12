@@ -35,8 +35,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <nav class="app-header navbar navbar-expand bg-body">
         <!--begin::Container-->
         <div class="container-fluid">
-            <?= $this->render('navbar_start') ?>
-            <?= $this->render('navbar_end') ?>
+            <?= $this->render('navbarStart') ?>
+            <?= $this->render('navbarEnd') ?>
         </div>
         <!--end::Container-->
     </nav>

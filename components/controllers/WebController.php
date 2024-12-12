@@ -3,13 +3,13 @@
 namespace app\components\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\web\User;
 
 /**
  * @property User $user
+ * @property-write string $flash
  */
 abstract class WebController extends Controller
 {
@@ -20,6 +20,13 @@ abstract class WebController extends Controller
         }
 
         return null;
+    }
+
+    public function setFlash(string $name, mixed $value = true): static
+    {
+        Yii::$app->session->setFlash($name, $value);
+
+        return $this;
     }
 
     /**

@@ -15,7 +15,7 @@ use yii\web\View;
     'items'        => [
         ['label' => BI::i('list'), 'url' => '#', 'options' => ['data-lte-toggle' => 'sidebar', 'role' => 'button']],
         ['label' => FA::i('home me-1') . 'Home', 'url' => ['/site/index']],
-        ['label' => FA::i('pencil me-1') . 'Contacts', 'url' => ['/site/contacts']],
+        ['label' => FA::i('pencil me-1') . 'Contact us', 'url' => ['/site/contact']],
     ],
     'encodeLabels' => false,
     'options'      => ['class' => 'navbar-nav'],

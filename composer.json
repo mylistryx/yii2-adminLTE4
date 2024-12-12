@@ -31,12 +31,13 @@
     "mylistryx/yii2-overlay-scrollbars-asset": ">=2.10.0",
     "mylistryx/yii2-source-sans-3-asset": ">=1.0.0",
     "php": ">=8.3.0",
-    "yiisoft/yii2-bootstrap5": "*",
-    "yiisoft/yii2": "~2.0.50"
+    "yiisoft/yii2": "~2.0.51",
+    "yiisoft/yii2-bootstrap5": "~2.0.4",
+    "yiisoft/yii2-symfonymailer": "~2.0.4"
   },
   "require-dev": {
-    "yiisoft/yii2-debug": "~2.1.0",
-    "yiisoft/yii2-gii": "~2.2.0"
+    "yiisoft/yii2-debug": "~2.1.25",
+    "yiisoft/yii2-gii": "~2.2.6"
   },
   "config": {
     "allow-plugins": {

@@ -3,7 +3,6 @@
 namespace yii\adminlte4;
 
 use Yii;
-use yii\bootstrap5\Widget;
 
 /**
  * Alert widget renders a message from session flash. All flash messages are displayed
